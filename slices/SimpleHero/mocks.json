@@ -1,0 +1,55 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Elit adipisicing ea in amet veniam dolor amet sint velit. Nostrud quis ex esse laboris fugiat esse qui aute consectetur dolor."
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Tempor id qui nostrud fugiat ad ad. Consequat qui consequat Lorem duis et aliquip amet sunt reprehenderit sunt dolore minim."
+						}
+					}
+				]
+			},
+			"image": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1484494789010-20fc1a011197?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMHx8RXZlbnR8ZW58MHx8fHwxNzI5NDY2Mzg4fDA&ixlib=rb-4.0.3&q=85",
+				"alt": "several people standing on field under blue sky",
+				"origin": {
+					"id": "IB5bld_weak",
+					"url": "https://images.unsplash.com/photo-1484494789010-20fc1a011197?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMHx8RXZlbnR8ZW58MHx8fHwxNzI5NDY2Mzg4fDA&ixlib=rb-4.0.3&q=85",
+					"width": 5200,
+					"height": 3902
+				},
+				"width": 5200,
+				"height": 3902,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]
