@@ -70,6 +70,7 @@ export type BlogpageDocument<Lang extends string = string> =
   >;
 
 type HomeDocumentDataSlicesSlice =
+  | FaqSlice
   | CustomerLogosSlice
   | CallToActionSlice
   | HeroSlice;
@@ -572,6 +573,73 @@ export type CustomerLogosSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Faq → Default → Primary → Repeater*
+ */
+export interface FaqSliceDefaultPrimaryRepeaterItem {
+  /**
+   * Question field in *Faq → Default → Primary → Repeater*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.default.primary.repeater[].question
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  question: prismic.KeyTextField;
+
+  /**
+   * Answer field in *Faq → Default → Primary → Repeater*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.default.primary.repeater[].answer
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  answer: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Faq → Default → Primary*
+ */
+export interface FaqSliceDefaultPrimary {
+  /**
+   * Repeater field in *Faq → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.default.primary.repeater[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  repeater: prismic.GroupField<Simplify<FaqSliceDefaultPrimaryRepeaterItem>>;
+}
+
+/**
+ * Default variation for Faq Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FaqSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Faq*
+ */
+type FaqSliceVariation = FaqSliceDefault;
+
+/**
+ * Faq Shared Slice
+ *
+ * - **API ID**: `faq`
+ * - **Description**: Faq
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FaqSlice = prismic.SharedSlice<"faq", FaqSliceVariation>;
+
+/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -833,6 +901,11 @@ declare module "@prismicio/client" {
       CustomerLogosSliceDefaultPrimary,
       CustomerLogosSliceVariation,
       CustomerLogosSliceDefault,
+      FaqSlice,
+      FaqSliceDefaultPrimaryRepeaterItem,
+      FaqSliceDefaultPrimary,
+      FaqSliceVariation,
+      FaqSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceImageRightPrimary,

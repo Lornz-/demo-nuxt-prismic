@@ -13,6 +13,7 @@ export const components = defineSliceZoneComponents({
   customer_logos: defineAsyncComponent(
     () => import("./CustomerLogos/index.vue"),
   ),
+  faq: defineAsyncComponent(() => import("./Faq/index.vue")),
   hero: defineAsyncComponent(() => import("./Hero/index.vue")),
   simple_hero: defineAsyncComponent(() => import("./SimpleHero/index.vue")),
 });
