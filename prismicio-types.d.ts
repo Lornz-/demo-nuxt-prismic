@@ -595,6 +595,16 @@ export interface FaqSliceDefaultPrimaryRepeaterItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   answer: prismic.RichTextField;
+
+  /**
+   * Image field in *Faq → Default → Primary → Repeater*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.default.primary.repeater[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 }
 
 /**

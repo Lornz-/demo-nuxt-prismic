@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// import { PrismicImage } from "#build/components";
 import { type Content } from "@prismicio/client";
 
 // The array passed to `getSliceComponentProps` is purely optional.
@@ -23,6 +24,7 @@ defineProps(
         <li>
           <p>{{ item.question }}</p>
           <PrismicRichText :field="item.answer" />
+          <PrismicImage :field="item.image" />
         </li>
       </template>
     </ul>
